@@ -44,20 +44,3 @@
   </script>
   <%- include('partials/footer.ejs'); -%>
   
-  
-  
-  
-  
-  <div class="box">
-    <h1><%=listTitle%></h1>
-  </div>
-  <div class="box">
-    <%for(let items of listItems){%>
-    <div class="item">
-    <form action="/delete" method="post">
-      <input type=checkbox 
-      onchange="this.form.submit()" name="deleteItemId" value="<%item.id%>">
-    </form>
-    <p id="title<%item.id%>"><%item.title%></p>
-    </div>
-  </div>
